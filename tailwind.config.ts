@@ -8,6 +8,14 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  safelist: [
+    {
+      pattern: /^(bg|text|border)-(purple|blue|green|orange)-(50|100|200|800|900)$/,
+    },
+    {
+      pattern: /^(from|to)-(blue|purple)-(500|600)$/,
+    },
+  ],
   prefix: "",
   theme: {
     container: {
