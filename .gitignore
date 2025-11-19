@@ -27,3 +27,6 @@ dist-ssr
 .next/
 dist/
 node_modules/
+serviceAccountKey.json
+
+.vercel
