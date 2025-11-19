@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Users, Calendar, Tag, Settings, LogOut, PlusCircle } from 'lucide-react';
+import { Users, Calendar, Tag, Settings, LogOut, PlusCircle, BarChart3 } from 'lucide-react';
 
 export default function DashboardLayout({
   children,
@@ -37,6 +37,7 @@ export default function DashboardLayout({
   const navItems = [
     { href: '/dashboard', label: 'All Contacts', icon: Users },
     { href: '/dashboard/follow-up', label: 'Follow-Up', icon: Calendar },
+    { href: '/dashboard/engagement', label: 'Engagement', icon: BarChart3 },
     { href: '/dashboard/tags', label: 'Tags', icon: Tag },
   ];
 
