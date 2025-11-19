@@ -9,7 +9,7 @@ import { EngagementDashboard } from '../components/EngagementDashboard';
 import { AddEngagementModal } from '../components/AddEngagementModal';
 
 // TODO: Get actual user ID from auth context
-const USER_ID = 'donspeedie@gmail.com';
+const USER_ID = 'default_user';
 
 export default function CRM() {
   const [isModalOpen, setIsModalOpen] = useState(false);
