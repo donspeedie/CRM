@@ -128,15 +128,14 @@ interface MetricCardProps {
 }
 
 function MetricCard({ title, value, color, description }: MetricCardProps) {
-  const colorClasses = {
-    purple: 'bg-purple-50 border-purple-200 text-purple-900',
-    blue: 'bg-blue-50 border-blue-200 text-blue-900',
-    green: 'bg-green-50 border-green-200 text-green-900',
-    orange: 'bg-orange-50 border-orange-200 text-orange-900',
-  };
+  const colorClass =
+    color === 'purple' ? 'bg-purple-50 border-purple-200 text-purple-900' :
+    color === 'blue' ? 'bg-blue-50 border-blue-200 text-blue-900' :
+    color === 'green' ? 'bg-green-50 border-green-200 text-green-900' :
+    'bg-orange-50 border-orange-200 text-orange-900';
 
   return (
-    <div className={`rounded-lg border-2 p-4 ${colorClasses[color]}`}>
+    <div className={`rounded-lg border-2 p-4 ${colorClass}`}>
       <p className="text-sm font-medium opacity-75">{title}</p>
       <p className="text-3xl font-bold mt-1">{value}</p>
       <p className="text-xs mt-1 opacity-60">{description}</p>

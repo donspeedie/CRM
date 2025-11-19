@@ -138,11 +138,10 @@ interface InfoCardProps {
 }
 
 function InfoCard({ icon, title, description, status, statusColor }: InfoCardProps) {
-  const statusColors = {
-    green: 'bg-green-100 text-green-800',
-    blue: 'bg-blue-100 text-blue-800',
-    orange: 'bg-orange-100 text-orange-800',
-  };
+  const statusClass =
+    statusColor === 'green' ? 'bg-green-100 text-green-800' :
+    statusColor === 'blue' ? 'bg-blue-100 text-blue-800' :
+    'bg-orange-100 text-orange-800';
 
   return (
     <div className="bg-white rounded-lg shadow p-6">
@@ -150,7 +149,7 @@ function InfoCard({ icon, title, description, status, statusColor }: InfoCardPro
       <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       <p className="mt-1 text-sm text-gray-500">{description}</p>
       <span
-        className={`mt-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusColors[statusColor]}`}
+        className={`mt-3 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusClass}`}
       >
         {status}
       </span>
