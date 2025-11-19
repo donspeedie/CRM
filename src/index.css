@@ -131,3 +131,31 @@
   -webkit-text-fill-color: transparent;
   animation: shimmer 3s ease-in-out infinite;
 }
+
+/* Custom color classes as workaround for Tailwind color generation issue */
+/* IMPORTANT: Outside @layer to prevent purging */
+.bg-purple-50 { background-color: #faf5ff !important; }
+.border-purple-200 { border-color: #e9d5ff !important; }
+.text-purple-900 { color: #581c87 !important; }
+
+.bg-blue-50 { background-color: #eff6ff !important; }
+.bg-blue-100 { background-color: #dbeafe !important; }
+.bg-blue-600 { background-color: #2563eb !important; }
+.bg-blue-700 { background-color: #1d4ed8 !important; }
+.border-blue-200 { border-color: #bfdbfe !important; }
+.border-blue-500 { border-color: #3b82f6 !important; }
+.text-blue-700 { color: #1d4ed8 !important; }
+.text-blue-800 { color: #1e40af !important; }
+.text-blue-900 { color: #1e3a8a !important; }
+.ring-blue-500 { --tw-ring-color: #3b82f6 !important; }
+
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-blue-600 {
+  --tw-gradient-to: #2563eb var(--tw-gradient-to-position) !important;
+}
+
+.hover\:bg-blue-700:hover { background-color: #1d4ed8 !important; }
